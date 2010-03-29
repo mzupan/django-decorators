@@ -17,7 +17,7 @@ projectname.django-decorators
 
 from django-decorators.auth import django-decorators
 
-@group_required(["group1", "group2"])
-def show_index(request):
-    ....
+ @group_required(["group1", "group2"])
+ def show_index(request):
+     ....
     
