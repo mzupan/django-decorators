@@ -13,11 +13,22 @@ projectname.django-decorators
 
 ## Usage
 
-### group_required
+### auth.group_required
 
-<code>
-<pre>from django-decorators.auth import django-decorators
+<pre><code>from django-decorators.auth import group_required
 
 @group_required(["group1", "group2"])
 def show_index(request):
     view_code_here</code></pre>
+
+### render.render
+
+This is a decorator that makes it easy to render quick templates where you just want 
+to push in quick data from a model
+
+<pre><code>from django-decorators.render import render
+
+@render("path/to/template.html")
+def show_index(request):
+    return {'objects': Model.objects.all()}</code></pre>
+    
