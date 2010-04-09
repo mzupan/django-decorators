@@ -1,4 +1,7 @@
-from functools import wraps
+try:
+    from functools import wraps
+except:
+    from django.utils.functional import wraps
 
 from django.contrib.auth.models import Group
 from django.http import Http404

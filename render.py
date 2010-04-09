@@ -1,7 +1,10 @@
+try:
+    from functools import wraps
+except:
+    from django.utils.functional import wraps
+
 from django.template import RequestContext
 from django.shortcuts import render_to_response
-
-from functools import wraps
 
 def render(t):
     def decorator(func):
